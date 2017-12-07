@@ -5,14 +5,31 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-
   <ion-navbar>
-    <ion-title>BattingBoxandBaseDimensions</ion-title>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>B. Batting Box and Base Dimensions</ion-title>
   </ion-navbar>
-
 </ion-header>
 
 
 <ion-content padding>
-
+  <div class="content">
+    <h2>B. Batting Box and Base Dimensions</h2>
+    <a (click)="imagePopup($event)">
+      <img src="assets/imgs/batting-boxand-base-dimensions/1.jpg" alt="Batting_Box_and_Base_Dimensions_1" />
+    </a>
+    <p style="padding: 0 20px;">The Double Base sometimes referred as the safety base is approved for use at first base. Half the base is secured in Fair Territory, and half the base (of a different solid contrasting colour) is secured in Foul Territory.</p>
+    <p style="font-style: italic;">The following rules apply to the double base:</p>
+    <ol>
+      <li>A Batted Ball hitting the Fair portion is declared Fair, and a Batted Ball hitting the Foul portion only, is declared Foul</li>
+      <li>If a play is made at first base on any Batted Ball, or (Fastpitch (FP) ONLY) the Batter runs on a dropped third Strike, and the Batter-Runner (Batter-Runner) touches only the Fair portion, and if the defence appeals prior to the Batter-Runner returning to first base, the Batter-Runner is out</li>
+      <li>A defensive player must use only the Fair portion of the base at all times
+EXCEPTION to Sec 4h 1c. On any live ball play made from first base Foul Territory, the Batter-Runner and the defensive player may use either portion of the base for safety reasons</li>
+      <li>After over-running the base, the Batter-Runner must return to the Fair portion of the base</li>
+      <li>On balls hit to the outfield when there is no play being made at the double base, the Batter-Runner may touch either portion of the base</li>
+      <li>Once a Runner returns to the Fair portion he must stay on the Fair portion only</li>
+    </ol>
+  </div>
 </ion-content>
