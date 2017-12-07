@@ -5,14 +5,23 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-
   <ion-navbar>
-    <ion-title>OfficialDimensions</ion-title>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Official Dimensions of a Softball Diamond</ion-title>
   </ion-navbar>
-
 </ion-header>
 
 
 <ion-content padding>
-
+  <div class="content">
+    <h2>Official Dimensions of a Softball Diamond</h2>
+    <a (click)="imagePopup($event)">
+      <img src="assets/imgs/official-dimensions/1.jpg" alt="Official_Dimensions_1" />
+    </a>
+    <a (click)="imagePopup($event)">
+      <img src="assets/imgs/official-dimensions/2.jpg" alt="Official_Dimensions_2" />
+    </a>
+  </div>
 </ion-content>
