@@ -5,14 +5,176 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-
   <ion-navbar>
-    <ion-title>FairandFoulBalls</ion-title>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Fair and Foul Balls</ion-title>
   </ion-navbar>
-
 </ion-header>
 
 
 <ion-content padding>
-
+  <div class="content">
+    <h2>Fair and Foul Balls</h2>
+    <div class="img-wrapper">
+      <a (click)="imagePopup($event)">
+        <img src="assets/imgs/fairand-foul-balls/1.jpg" alt="Fair_and_Foul_Balls_1" />
+      </a>
+    </div>
+    <ol>
+      <li>A Fair ball must:
+        <ul>
+          <li>Settle in Fair Territory between first and third bases – or</li>
+          <li>Bounce past third or first base in Fair Territory – or</li>
+          <li>Bounce over first or third base – or</li>
+          <li>Fall Fair beyond first or third base on a Fly Ball – or</li>
+          <li>Be first touched on or over Fair ground.</li>
+        </ul>
+      </li>
+      <li>Fair Territory is territory within Foul lines. Foul Territory is area outside the Foul lines. The line is considered in Fair Territory so the complete ball must be outside the lines to be Foul</li>
+      <p>Note: If a Fielder is standing in Foul Territory and touches the ball while over Fair Territory it is a Fair ball, likewise if a Fielder is standing in Fair Territory and touches the ball over Foul Territory it is a Foul ball.</p>
+      <div class="img-wrapper">
+        <a (click)="imagePopup($event)">
+          <img src="assets/imgs/fairand-foul-balls/2.jpg" alt="Fair_and_Foul_Balls_2" />
+        </a>
+      </div>
+      <ion-grid>
+        <ion-row>
+          <ion-col col-auto>
+            <p>Pic 1.</p>
+          </ion-col>
+          <ion-col>
+            <p>The ball first bounces in Fair Territory, then spins into Foul Territory before passing 1st base, and comes to rest in Foul Territory</p>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-auto>
+            <p>Pic 2.</p>
+          </ion-col>
+          <ion-col>
+            <p>The ball curves over the Double Base then bounces into Foul Territory</p>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-auto>
+            <p>Pic 3.</p>
+          </ion-col>
+          <ion-col>
+            <p>The ball first bounces in Foul Territory then turns and bounces into Fair Territory and is touched or comes to rest before passing 1st base</p>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-auto>
+            <p>Pic 4.</p>
+          </ion-col>
+          <ion-col>
+            <p>A line drive hits the pitcher’s plate without touching a player, veers into Foul Territory between home and third and comes to rest</p>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-auto>
+            <p>Pic 5.</p>
+          </ion-col>
+          <ion-col>
+            <p>The ball bounces in Fair Territory the crosses directly over the 3rd base and lands in Foul Territory</p>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-auto>
+            <p>Pic 6.</p>
+          </ion-col>
+          <ion-col>
+            <p>The ball is touched by the Fielder in Fair Territory, and deflects into Foul Territory and comes to rest in Fair Territory</p>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-auto>
+            <p>Pic 7.</p>
+          </ion-col>
+          <ion-col>
+            <p>A Fielder touches the ball in Foul Territory or the Batted Ball hits a Runner while he takes a lead off third base in Foul Territory, and the ball goes deflects into Fair Territory</p>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-auto>
+            <p>Pic 8.</p>
+          </ion-col>
+          <ion-col>
+            <p>A Batted Ball rolls directly along the Foul line, touches 1st base and then rolls Foul, never passing the base</p>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-auto>
+            <p>Pic 9.</p>
+          </ion-col>
+          <ion-col>
+            <p>A Batted Ball rolls bounces toward 1st base first contacting the double base and going Foul</p>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-auto>
+            <p>Pic 10.</p>
+          </ion-col>
+          <ion-col>
+            <p>A Batted Ball rolls bounces toward 1st base contacting the corner of 1st base and the double base at the same time</p>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-auto>
+            <p>Pic 11.</p>
+          </ion-col>
+          <ion-col>
+            <p>The Batted Ball first lands in outfield Fair Territory beyond the base and bounces and settles Foul</p>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-auto>
+            <p>Pic 12.</p>
+          </ion-col>
+          <ion-col>
+            <p>The Batted Ball passes over 3rd base and first lands in Foul Territory beyond 3rd base before turning a settling in Fair Territory</p>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-auto>
+            <p>Pic 13.</p>
+          </ion-col>
+          <ion-col>
+            <p>The Fielder first touches the Batted Ball while the ball is over Foul Territory</p>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-auto>
+            <p>Pic 14.</p>
+          </ion-col>
+          <ion-col>
+            <p>The Batted Ball hits left field Foul pole and bounces into the stands in Foul Territory</p>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-auto>
+            <p>Pic 15.</p>
+          </ion-col>
+          <ion-col>
+            <p>The Batted Ball first lands in Foul Territory then spins bouncing back directly over 3rd base and comes to rest in Fair Territory</p>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-auto>
+            <p>Pic 16.</p>
+          </ion-col>
+          <ion-col>
+            <p>The Batted Ball first lands in Fair Territory then spins bouncing into Foul Territory beyond 1st base and comes to rest in Foul Territory</p>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <div class="img-wrapper">
+        <a (click)="imagePopup($event)">
+          <img src="assets/imgs/fairand-foul-balls/3.jpg" alt="Fair_and_Foul_Balls_3" />
+        </a>
+      </div>
+      <li>It is a Fair ball if it strikes an umpire standing in Fair Territory – before touching a Fielder other than the pitcher. A pitcher is a Fielder if he touches or is touched by the Batted Ball.</li>
+    </ol>
+  </div>
 </ion-content>

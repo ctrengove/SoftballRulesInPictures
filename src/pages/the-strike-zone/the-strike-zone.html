@@ -5,14 +5,45 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-
   <ion-navbar>
-    <ion-title>TheStrikeZone</ion-title>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>The Strike Zone</ion-title>
   </ion-navbar>
-
 </ion-header>
 
 
 <ion-content padding>
-
+  <div class="content">
+    <h2>The Strike Zone</h2>
+    <div class="img-wrapper">
+      <a (click)="imagePopup($event)">
+        <img src="assets/imgs/the-strike-zone/1.jpg" alt="The_Strike_Zone_1" />
+      </a>
+    </div>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-6>
+          <div class="img-wrapper">
+            <a (click)="imagePopup($event)">
+              <img src="assets/imgs/the-strike-zone/2.jpg" alt="The_Strike_Zone_2" />
+            </a>
+          </div>
+        </ion-col>
+        <ion-col col-6>
+          <div class="img-wrapper">
+            <a (click)="imagePopup($event)">
+              <img src="assets/imgs/the-strike-zone/3.jpg" alt="The_Strike_Zone_3" />
+            </a>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ol>
+      <li>It is a <span style="font-weight: bold;">Strike</span> if any part of the ball enters any part of the <span style="font-weight: bold;">Strike Zone</span> over home plate before touching the ground.</li>
+      <li>In Elite play the ball must be below the sternum bone and above the bottom of the knee.</li>
+      <li>Any pitch, outside the Strike zone, not swung at by the Batter, is a Ball.</li>
+    </ol>
+  </div>
 </ion-content>

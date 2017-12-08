@@ -5,14 +5,46 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-
   <ion-navbar>
-    <ion-title>RunnerHitbyBall</ion-title>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Runner Hit by Ball</ion-title>
   </ion-navbar>
-
 </ion-header>
 
 
 <ion-content padding>
-
+  <div class="content">
+    <h2>Runner Hit by Ball</h2>
+    <ol>
+      <div class="img-wrapper">
+        <a (click)="imagePopup($event)">
+          <img src="assets/imgs/runner-hitby-ball/1.jpg" alt="Runner_Hit_by_Ball_1" />
+        </a>
+      </div>
+      <li>If a fair batted ball hits a Runner who is in contact with a base, the ball is alive and Runners may advance. If a fair batted ball hits a Runner who is not in contact with a base, then one of three things can happen:</li>
+      <li>If the Runner was struck and any fielder had a chance to make an out, then the ball is dead and the Runner struck by the ball is out; or</li>
+      <li>If the Runner was struck after passing a fielder, other than the pitcher, and no fielder had a chance to make an out, then the ball is alive and Runners may advance.</li>
+      <li>If the runner is hit by a batted ball touched by a fielder including the pitcher, the ball remains alive and the runner is not out.</li>
+      <div class="img-wrapper">
+        <a (click)="imagePopup($event)">
+          <img src="assets/imgs/runner-hitby-ball/2.jpg" alt="Runner_Hit_by_Ball_2" />
+        </a>
+      </div>
+      <li>A Foul Tip is a batted ball that goes directly from the bat, not higher than the batter's head, to the catcher's hands and is caught by the catcher. Runners may advance on a Foul Tip as the ball remains alive. If the ball goes higher than the Batters head and is caught by the catcher, the Batter is out. A Foul tip that is not caught is simply a Foul Ball.</li>
+      <div class="img-wrapper">
+        <a (click)="imagePopup($event)">
+          <img src="assets/imgs/runner-hitby-ball/3.jpg" alt="Runner_Hit_by_Ball_3" />
+        </a>
+      </div>
+      <li>A Batter should run when he hits a Fair ball. He is then considered a Batter-Runner.</li>
+      <div class="img-wrapper">
+        <a (click)="imagePopup($event)">
+          <img src="assets/imgs/runner-hitby-ball/4.jpg" alt="Runner_Hit_by_Ball_4" />
+        </a>
+      </div>
+      <li>A Batter may run when he has three Strikes – if the catcher fails to catch the ball.</li>
+    </ol>
+  </div>
 </ion-content>
