@@ -1,3 +1,38 @@
 page-league-schedule {
+  h2{
+    text-align: center;
+    font-family: "arial";
+    color: #000;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
 
+  h3{
+    color: #000;
+  }
+
+  hr{
+    position: absolute;
+    margin: 0;
+    top: 60%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -60%);
+    width: 100%;
+    border:none;
+    border-bottom: 1px dashed #000;
+    color:#fff;
+    background-color:#fff;
+  }
+
+  ion-grid.numbers{
+    padding: 0;
+    ion-row{
+      padding: 0;
+      text-align: center;
+      p{
+        margin: 0;
+      }
+    }
+  }
 }

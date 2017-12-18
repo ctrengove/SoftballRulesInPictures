@@ -5,14 +5,56 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-
   <ion-navbar>
-    <ion-title>BaseAwardsThree</ion-title>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Base Awards</ion-title>
   </ion-navbar>
-
 </ion-header>
 
 
 <ion-content padding>
-
+  <div class="content">
+    <h2>Base Awards</h2>
+    <ol>
+      <div class="img-wrapper">
+        <a (click)="imagePopup($event)">
+          <img src="assets/imgs/base-awards-three/1.jpg" alt="Base_Awards_1" />
+        </a>
+      </div>
+      <li>The Batter and all Runners are entitled to advance home without Jeopardy when the ball is prevented from going over the fence by a Fielder striking it with a thrown glove, apparel or equipment. The ball stays alive.</li>
+      <div class="img-wrapper">
+        <a (click)="imagePopup($event)">
+          <img src="assets/imgs/base-awards-three/2.jpg" alt="Base_Awards_2" />
+        </a>
+      </div>
+      <li>The Batter and all Runners are entitled to advance home without Jeopardy when a Fair ball is hit over the fence.</li>
+      <div class="img-wrapper">
+        <a (click)="imagePopup($event)">
+          <img src="assets/imgs/base-awards-three/3.jpg" alt="Base_Awards_3" />
+        </a>
+      </div>
+      <li>The Batter and all Runners advance three bases without risk if a Fielder touches any Fair batted ball with a thrown mask, glove or detached part of uniform. The Batter may try for home at his own risk.</li>
+      <div class="img-wrapper">
+        <a (click)="imagePopup($event)">
+          <img src="assets/imgs/base-awards-three/4.jpg" alt="Base_Awards_4" />
+        </a>
+      </div>
+      <li>If a ball is thrown by a Fielder and another Fielder throws his equipment at, and contacts, the ball, the Batter and all Runners advance two bases without risk, but may advance further at their own risk.</li>
+      <div class="img-wrapper">
+        <a (click)="imagePopup($event)">
+          <img src="assets/imgs/base-awards-three/5.jpg" alt="Base_Awards_5" />
+        </a>
+      </div>
+      <li>If a thrown ball goes out of play, the Batter and all Runners are awarded two bases without Jeopardy from the base occupied at the time the ball was thrown. If two runners are between the same bases, the award is based on the position of the lead runner. The ball is dead.</li>
+      <div class="img-wrapper">
+        <a (click)="imagePopup($event)">
+          <img src="assets/imgs/base-awards-three/6.jpg" alt="Base_Awards_6" />
+        </a>
+      </div>
+      <li>A wild pitch to the Batter which goes into the stands, bench, etc., entitles Runners to advance one base without Jeopardy. The ball is dead. Rule 8 Section 7c.</li>
+    </ol>
+    <p><span style="font-weight: bold;">A note on base awards: </span>Base awards are determined by the last base previously occupied by a runner. For example, imagine a batter hits a ground ball to centre field and, as he rounds 1st base to go to 2nd, they realise they won’t make it, so they turn around to run back to 1st base. The centre fielder then throws the ball over the first base fielder’s head into dead ball territory. Even though the batter runner was heading back to first base, they are awarded 3rd base because the last base occupied, or touched, by the runner at the time of the throw was 1st base.</p>
+  </div>
 </ion-content>

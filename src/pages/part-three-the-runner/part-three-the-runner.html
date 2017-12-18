@@ -5,14 +5,60 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-
   <ion-navbar>
-    <ion-title>PartThreeTheRunner</ion-title>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Part 3: The Runner</ion-title>
   </ion-navbar>
-
 </ion-header>
 
 
 <ion-content padding>
-
+  <div class="content">
+    <h2>Part 3: The Runner</h2>
+    <ol>
+      <div class="img-wrapper">
+        <a (click)="imagePopup($event)">
+          <img src="assets/imgs/part-three-the-runner/1.jpg" alt="Part_3_The_Runner_1" />
+        </a>
+      </div>
+      <li>The Runner must touch first, second, third and home bases, in order, to score a run.</li>
+      <div class="img-wrapper">
+        <a (click)="imagePopup($event)">
+          <img src="assets/imgs/part-three-the-runner/2.jpg" alt="Part_3_The_Runner_2" />
+        </a>
+      </div>
+      <li>The Runner may try to advance, or steal, another base after the pitcher releases the ball, but not before, or the Runner will be called out and the ball is dead.</li>
+      <div class="img-wrapper">
+        <a (click)="imagePopup($event)">
+          <img src="assets/imgs/part-three-the-runner/3.jpg" alt="Part_3_The_Runner_3" />
+        </a>
+      </div>
+      <li>If forced to return to a base, a Runner must touch bases in reverse order.</li>
+      <div class="img-wrapper">
+        <a (click)="imagePopup($event)">
+          <img src="assets/imgs/part-three-the-runner/4.jpg" alt="Part_3_The_Runner_4" />
+        </a>
+      </div>
+      <li>Two Runners may not occupy the same base. The first Runner retains the right to the base, except on Force Plays.</li>
+      <div class="img-wrapper">
+        <a (click)="imagePopup($event)">
+          <img src="assets/imgs/part-three-the-runner/5.jpg" alt="Part_3_The_Runner_5" />
+        </a>
+      </div>
+      <li>If not a Force Play, and the second Runner is tagged while on the same base, he is out.</li>
+      <div class="img-wrapper">
+        <a (click)="imagePopup($event)">
+          <img src="assets/imgs/part-three-the-runner/6.jpg" alt="Part_3_The_Runner_6" />
+        </a>
+      </div>
+      <li>Runners advance one base without risk when the Batter is awarded first base and Runners must advance to vacate first base for him.</li>
+      <div class="img-wrapper">
+        <a (click)="imagePopup($event)">
+          <img src="assets/imgs/part-three-the-runner/7.jpg" alt="Part_3_The_Runner_7" />
+        </a>
+      </div>
+    </ol>
+  </div>
 </ion-content>

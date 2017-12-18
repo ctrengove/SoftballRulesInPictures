@@ -5,14 +5,53 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-
   <ion-navbar>
-    <ion-title>InterferencePlays</ion-title>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Interference Plays</ion-title>
   </ion-navbar>
-
 </ion-header>
 
 
 <ion-content padding>
-
+  <div class="content">
+    <h2>Interference Plays</h2>
+    <ol>
+      <li>On all Interference plays somebody must be out and the ball is dead. If the Batter-Runner interferes, Runners return to the last base touched at the time of the pitch. If a Runner interferes, Runners return to the last base touched at the time of the interference. Rule 9 Section 1f.</li>
+      <li>The rule of thumb for deciding who is out on an interference is this:</li>
+      <li>If the person who interfered can be called out (because they were a Batter, Batter-Runner or Runner who has not yet been put out – then they are out;</li>
+      <li>If the person who interfered can’t be out (because they have already been called out or it was a coach, on-deck batter or other member of the offensive team) – then the runner closest to home is out.</li>
+      <div class="img-wrapper">
+        <a (click)="imagePopup($event)">
+          <img src="assets/imgs/interference-plays/1.jpg" alt="Interference_Plays_1" />
+        </a>
+      </div>
+      <li>When the Batter interferes with a play at the plate, he is out. Runners return to the last base held at the time of the Interference.</li>
+      <div class="img-wrapper">
+        <a (click)="imagePopup($event)">
+          <img src="assets/imgs/interference-plays/2.jpg" alt="Interference_Plays_2" />
+        </a>
+      </div>
+      <li>The Runner is out when he fails to yield right of way to a Fielder fielding a Fair Batted Ball.</li>
+      <div class="img-wrapper">
+        <a (click)="imagePopup($event)">
+          <img src="assets/imgs/interference-plays/3.jpg" alt="Interference_Plays_3" />
+        </a>
+      </div>
+      <li>The Runner is out when he intentionally interferes with a thrown ball. In this case an interference had occurred and the ball is dead.</li>
+      <div class="img-wrapper">
+        <a (click)="imagePopup($event)">
+          <img src="assets/imgs/interference-plays/4.jpg" alt="Interference_Plays_4" />
+        </a>
+      </div>
+      <li>The Runner closest to home is out if the coach leaves the coach’s box and makes the Fielder think he is a Runner by running toward home, and draws a throw from the Fielder to the catcher.</li>
+      <div class="img-wrapper">
+        <a (click)="imagePopup($event)">
+          <img src="assets/imgs/interference-plays/5.jpg" alt="Interference_Plays_5" />
+        </a>
+      </div>
+      <li>The Runner is out if teammates gather around a base to which the Runner is advancing to confuse or hinder the Defensive Team.</li>
+    </ol>
+  </div>
 </ion-content>

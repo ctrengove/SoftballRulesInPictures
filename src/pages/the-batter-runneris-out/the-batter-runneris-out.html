@@ -5,14 +5,62 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-
   <ion-navbar>
-    <ion-title>TheBatterRunnerisOut</ion-title>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>The Batter-Runner is Out</ion-title>
   </ion-navbar>
-
 </ion-header>
 
 
 <ion-content padding>
-
+  <div class="content">
+    <h2>The Batter-Runner is Out</h2>
+    <ol>
+      <div class="img-wrapper">
+        <a (click)="imagePopup($event)">
+          <img src="assets/imgs/the-batter-runneris-out/1.jpg" alt="The_Batter-Runner_is_Out_1" />
+        </a>
+      </div>
+      <li>The Batter-Runner is out if his Fair-Batted Ball bounces up and hits him while his foot is touching the ground and he is out of the Batter's box.</li>
+      <div class="img-wrapper">
+        <a (click)="imagePopup($event)">
+          <img src="assets/imgs/the-batter-runneris-out/2.jpg" alt="The_Batter-Runner_is_Out_2" />
+        </a>
+      </div>
+      <li>The Batter-Runner is out if a Fair-Batted Ball is held by a Fielder on first base before the Batter-Runner reaches the base.</li>
+      <div class="img-wrapper">
+        <a (click)="imagePopup($event)">
+          <img src="assets/imgs/the-batter-runneris-out/3.jpg" alt="The_Batter-Runner_is_Out_3" />
+        </a>
+      </div>
+      <li>The Batter-Runner is out if the ball is held by a Fielder on first base before the Batter-Runner reaches the base on a dropped third Strike.</li>
+      <div class="img-wrapper">
+        <a (click)="imagePopup($event)">
+          <img src="assets/imgs/the-batter-runneris-out/4.jpg" alt="The_Batter-Runner_is_Out_4" />
+        </a>
+      </div>
+      <li>The Batter-Runner is out if he is touched (tagged) before he reaches first base on a Fair-Batted Ball, or on a third Strike that is not caught.</li>
+      <div class="img-wrapper">
+        <a (click)="imagePopup($event)">
+          <img src="assets/imgs/the-batter-runneris-out/5.jpg" alt="The_Batter-Runner_is_Out_5" />
+        </a>
+      </div>
+      <li>The Batter-Runner is <span style="font-weight: bold;">Not</span> out if he drops the bat and the ball rolls and contacts the stationary bat
+If the bat hits the ball, the Batter is out.</li>
+      <div class="img-wrapper">
+        <a (click)="imagePopup($event)">
+          <img src="assets/imgs/the-batter-runneris-out/6.jpg" alt="The_Batter-Runner_is_Out_6" />
+        </a>
+      </div>
+      <li>The Runner is out if he dodges more than .91 metres (3 feet) to avoid a <span style="font-weight: bold;">Tag</span>.</li>
+      <div class="img-wrapper">
+        <a (click)="imagePopup($event)">
+          <img src="assets/imgs/the-batter-runneris-out/7.jpg" alt="The_Batter-Runner_is_Out_7" />
+        </a>
+      </div>
+      <li>The Batter-Runner is out if he interferes with a Fielder executing a play.</li>
+    </ol>
+  </div>
 </ion-content>

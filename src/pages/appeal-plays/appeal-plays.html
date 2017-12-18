@@ -5,14 +5,62 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-
   <ion-navbar>
-    <ion-title>AppealPlays</ion-title>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Appeal Plays</ion-title>
   </ion-navbar>
-
 </ion-header>
 
 
 <ion-content padding>
-
+  <div class="content">
+    <h2>Appeal Plays</h2>
+    <ol>
+      <li>An Appeal must be made to the umpire by a Defensive Player before the next pitch to a Batter. An Appeal is defined by the rules as the act of a Fielder in claiming a violation of the rules by the Offensive Team.</li>
+      <div class="img-wrapper">
+        <a (click)="imagePopup($event)">
+          <img src="assets/imgs/appeal-plays/1.jpg" alt="Appeal_Plays_1" />
+        </a>
+      </div>
+      <li>If a Runner leaves base before a Fly Ball, Fair or Foul, is first touched and caught, he is out if the base is tagged before he returns to the base.</li>
+      <div class="img-wrapper">
+        <a (click)="imagePopup($event)">
+          <img src="assets/imgs/appeal-plays/2.jpg" alt="Appeal_Plays_2" />
+        </a>
+      </div>
+      <li>If a Runner leaves base before a Fly Ball, Fair or Foul, is first touched and caught, he is out if he is tagged before he returns to the base.</li>
+      <div class="img-wrapper">
+        <a (click)="imagePopup($event)">
+          <img src="assets/imgs/appeal-plays/3.jpg" alt="Appeal_Plays_3" />
+        </a>
+      </div>
+      <li>If a Runner misses a base, he may be put out by a Fielder touching the base with the ball before the Runner retags the base, or he may be tagged out before he returns to the missed base.</li>
+      <div class="img-wrapper">
+        <a (click)="imagePopup($event)">
+          <img src="assets/imgs/appeal-plays/4.jpg" alt="Appeal_Plays_4" />
+        </a>
+      </div>
+      <li>The Runner is out if he is tagged while returning to first base after over running and attempting to run to second base.</li>
+      <div class="img-wrapper">
+        <a (click)="imagePopup($event)">
+          <img src="assets/imgs/appeal-plays/5.jpg" alt="Appeal_Plays_5" />
+        </a>
+      </div>
+      <li>The Runner is out if he over-slides home plate – misses it and makes no attempt to return to it – and the plate is tagged by a Fielder.</li>
+      <div class="img-wrapper">
+        <a (click)="imagePopup($event)">
+          <img src="assets/imgs/appeal-plays/6.jpg" alt="Appeal_Plays_6" />
+        </a>
+      </div>
+      <li>All Runners must return to the last base held at the time of the pitch on a Foul ball not caught.</li>
+      <div class="img-wrapper">
+        <a (click)="imagePopup($event)">
+          <img src="assets/imgs/appeal-plays/7.jpg" alt="Appeal_Plays_7" />
+        </a>
+      </div>
+      <li>The Runner need not retouch after a Foul tip as this is considered a regular Strike and the ball remains alive.</li>
+    </ol>
+  </div>
 </ion-content>

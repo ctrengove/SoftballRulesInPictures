@@ -5,14 +5,63 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-
   <ion-navbar>
-    <ion-title>TheBatterisOut</ion-title>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>The Batter is Out</ion-title>
   </ion-navbar>
-
 </ion-header>
 
 
 <ion-content padding>
-
+  <div class="content">
+    <h2>The Batter is Out</h2>
+    <ol>
+      <li>A bunt is a batted ball not swung at but intentionally met with the bat and tapped slowly within the <span style="font-weight: bold;">playing field</span>.</li>
+      <li>A fly ball is any ball batted into the air.</li>
+      <div class="img-wrapper">
+        <a (click)="imagePopup($event)">
+          <img src="assets/imgs/the-batteris-out/1.jpg" alt="The_Batter_is_Out_1" />
+        </a>
+      </div>
+      <li>The Batter is <span style="font-weight: bold;">Out</span> if he hits a Fair Fly Ball which is caught by a Fielder before it touches the ground.</li>
+      <div class="img-wrapper">
+        <a (click)="imagePopup($event)">
+          <img src="assets/imgs/the-batteris-out/2.jpg" alt="The_Batter_is_Out_2" />
+        </a>
+      </div>
+      <li>The Batter is out if he hits a Foul Fly Ball which is caught by a Fielder before it touches the ground.</li>
+      <div class="img-wrapper">
+        <a (click)="imagePopup($event)">
+          <img src="assets/imgs/the-batteris-out/3.jpg" alt="The_Batter_is_Out_3" />
+        </a>
+      </div>
+      <li>The Batter is out if his third Strike is caught by the catcher.</li>
+      <div class="img-wrapper">
+        <a (click)="imagePopup($event)">
+          <img src="assets/imgs/the-batteris-out/4.jpg" alt="The_Batter_is_Out_4" />
+        </a>
+      </div>
+      <li>If there is a Runner on first base with less than 2 out and the catcher drops the third Strike, the Batter is Out. This rule prevents an unfair double play.</li>
+      <div class="img-wrapper">
+        <a (click)="imagePopup($event)">
+          <img src="assets/imgs/the-batteris-out/5.jpg" alt="The_Batter_is_Out_5" />
+        </a>
+      </div>
+      <li>If the third Strike is dropped, with less than two out and first base is not occupied, the Batter-Runner is safe if he can beat the throw to first, or he is not tagged off base.</li>
+      <div class="img-wrapper">
+        <a (click)="imagePopup($event)">
+          <img src="assets/imgs/the-batteris-out/6.jpg" alt="The_Batter_is_Out_6" />
+        </a>
+      </div>
+      <li>The Batter is out if he bunts the third Strike Foul.</li>
+      <div class="img-wrapper">
+        <a (click)="imagePopup($event)">
+          <img src="assets/imgs/the-batteris-out/7.jpg" alt="The_Batter_is_Out_7" />
+        </a>
+      </div>
+      <li>The Batter is out if the third Strike is swung at and the ball hits him.</li>
+    </ol>
+  </div>
 </ion-content>

@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import { ModalController } from 'ionic-angular';
+
+import { ImagePage } from '../image/image';
 
 /**
  * Generated class for the PartThreeTheRunnerPage page.
@@ -13,12 +16,19 @@ import { NavController, NavParams } from 'ionic-angular';
   templateUrl: 'part-three-the-runner.html',
 })
 export class PartThreeTheRunnerPage {
+  url = '';
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public modalCtrl: ModalController, public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad PartThreeTheRunnerPage');
+    console.log('ionViewDidLoad OfficialDimensionsPage');
+  }
+
+  imagePopup() {
+    let imageinfo: any = event.target;
+    let image = this.modalCtrl.create(ImagePage, { 'url': imageinfo.src });
+    image.present();
   }
 
 }

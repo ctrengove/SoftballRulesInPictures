@@ -5,14 +5,49 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-
   <ion-navbar>
-    <ion-title>ScoringRuns</ion-title>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Scoring Runs</ion-title>
   </ion-navbar>
-
 </ion-header>
 
 
 <ion-content padding>
-
+  <div class="content">
+    <h2>Scoring Runs</h2>
+    <ol>
+      <div class="img-wrapper">
+        <a (click)="imagePopup($event)">
+          <img src="assets/imgs/scoring-runs/1.jpg" alt="Scoring_Runs_1" />
+        </a>
+      </div>
+      <li>If a Preceding Runner is appealed for missing a base, it does not affect the base Runners behind him, whether put out or not, unless it’s the third out.</li>
+      <div class="img-wrapper">
+        <a (click)="imagePopup($event)">
+          <img src="assets/imgs/scoring-runs/2.jpg" alt="Scoring_Runs_2" />
+        </a>
+      </div>
+      <li>Runs score if the Appeal Play for the third out is behind the Runner and is not a Force Out.</li>
+      <div class="img-wrapper">
+        <a (click)="imagePopup($event)">
+          <img src="assets/imgs/scoring-runs/3.jpg" alt="Scoring_Runs_3" />
+        </a>
+      </div>
+      <li>Runs don’t score if the Batter is put out before reaching first.</li>
+      <div class="img-wrapper">
+        <a (click)="imagePopup($event)">
+          <img src="assets/imgs/scoring-runs/4.jpg" alt="Scoring_Runs_4" />
+        </a>
+      </div>
+      <li>Runs don’t score if the third out on any Runner is a Force Out.</li>
+      <div class="img-wrapper">
+        <a (click)="imagePopup($event)">
+          <img src="assets/imgs/scoring-runs/5.jpg" alt="Scoring_Runs_5" />
+        </a>
+      </div>
+      <li>Run’s do not score if a proceeding Runner is the third out on an Appeal Play.</li>
+    </ol>
+  </div>
 </ion-content>

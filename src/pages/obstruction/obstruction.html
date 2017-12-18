@@ -5,14 +5,26 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-
   <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
     <ion-title>Obstruction</ion-title>
   </ion-navbar>
-
 </ion-header>
 
 
 <ion-content padding>
-
+  <div class="content">
+    <h2>Obstruction</h2>
+    <ol>
+      <li>If the catcher obstructs the Batter as he attempts to Strike the ball the Batter is awarded first base. All other Runners hold their bases, unless forced to advance. Dead Ball. Rule 8 Section 1d & Effect. An obstruction on the Batter is usually caused by the bat hitting the catcher’s glove as the Batter swings at the ball.</li>
+      <div class="img-wrapper">
+        <a (click)="imagePopup($event)">
+          <img src="assets/imgs/obstruction/1.jpg" alt="Obstruction_1" />
+        </a>
+      </div>
+      <li>A Runner advances without risk to a base if a defensive player, without the ball and not in the act of fielding it, obstructs his progress. He is awarded the base he would have made had the obstruction not occurred.</li>
+    </ol>
+  </div>
 </ion-content>

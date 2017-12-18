@@ -5,14 +5,32 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-
   <ion-navbar>
-    <ion-title>BattingOutOfOrder</ion-title>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Batting Out Of Order</ion-title>
   </ion-navbar>
-
 </ion-header>
 
 
 <ion-content padding>
-
+  <div class="content">
+    <h2>Batting Out Of Order</h2>
+    <ol>
+      <li>The Batter who should have batted is out if someone else bats in his turn. To obtain the out, the Defensive Team must appeal to the umpire before a ball is pitched to the batter who follows the batter who batted incorrectly. If no appeal is made, all plays stand and no one is out (but the batter who should have batted misses their turn).</li>
+      <div class="img-wrapper">
+        <a (click)="imagePopup($event)">
+          <img src="assets/imgs/batting-out-of-order/1.jpg" alt="Batting_Out_Of_Order_1" />
+        </a>
+      </div>
+      <li>If an appeal is made while the incorrect Batter is still at bat, the proper Batter comes to bat and assumes the Ball and Strike count of the incorrect Batter. Nobody is out</li>
+      <div class="img-wrapper">
+        <a (click)="imagePopup($event)">
+          <img src="assets/imgs/batting-out-of-order/2.jpg" alt="Batting_Out_Of_Order_2" />
+        </a>
+      </div>
+      <li>If an appeal is made after the incorrect Batter has completed his time at bat but before the next pitch, the Batter who should have batted is out and bases run and scores made are reversed if the advance of Runners is due to the actions of the incorrect Batter. Any outs obtained on the play remain out.</li>
+    </ol>
+  </div>
 </ion-content>
