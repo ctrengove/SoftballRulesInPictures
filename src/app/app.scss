@@ -21,3 +21,42 @@
   width: 100%;
   height: 100%;
 }
+
+side-menu-content {
+
+    // Single option
+    // ------------------
+    ion-item.item.item-block.option {
+        background-color: #fff;
+        color: #222;
+
+        &.active-side-menu-option {
+            color: #007d57;
+            font-weight: 700;
+        }
+    }
+
+    // Header
+    // ------------------
+    ion-item.item.item-block.header {
+        background-color: #eee;
+        color: #222;
+
+        &.active-side-menu-option {
+            color: #007d57;
+            font-weight: 700;
+        }
+    }
+
+    // Sub option
+    // ------------------
+    ion-item.item.item-block.sub-option {
+        background-color: #fff;
+        color: #222;
+
+        &.active-side-menu-option {
+            color: #007d57;
+            font-weight: 700;
+        }
+    }
+}

@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { Nav, Platform } from 'ionic-angular';
+import { Nav, Platform, MenuController, AlertController } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
@@ -31,51 +31,44 @@ import { PositionofPlayersPage } from '../pages/positionof-players/positionof-pl
 import { TeamTrainingSessionPage } from '../pages/team-training-session/team-training-session';
 import { LeagueSchedulePage } from '../pages/league-schedule/league-schedule';
 
+// Side Menu Component
+import { SideMenuContentComponent } from './../shared/side-menu-content/side-menu-content.component';
+import { SideMenuSettings } from './../shared/side-menu-content/models/side-menu-settings';
+import { MenuOptionModel } from './../shared/side-menu-content/models/menu-option-model';
+
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
+  // Get the instance to call the public methods
+	@ViewChild(SideMenuContentComponent) sideMenu: SideMenuContentComponent;
+
   rootPage: any = HomePage;
 
-  pages: Array<{title: string, component: any}>;
+	// Options to show in the SideMenuComponent
+	public options: Array<MenuOptionModel>;
 
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
-    this.initializeApp();
+	// Settings for the SideMenuComponent
+	public sideMenuSettings: SideMenuSettings = {
+		accordionMode: true,
+		showSelectedOption: true,
+		selectedOptionClass: 'active-side-menu-option',
+		subOptionIndentation: {
+			md: '56px',
+			ios: '64px',
+			wp: '56px'
+		}
+	};
 
-    // used for an example of ngFor and navigation
-    this.pages = [
-      { title: 'Home', component: HomePage },
-      { title: 'Official Dimensions of a Softball Diamond', component: OfficialDimensionsPage },
-      { title: 'Pitching distances', component: PitchingDistancesPage },
-      { title: 'Batting Box and Base Dimensions', component: BattingBoxandBaseDimensionsPage },
-      { title: 'Part 1: The Pitcher', component: PartOneThePitcherPage },
-      { title: 'Part 2: The Batter', component: PartTwoTheBatterPage },
-      { title: 'The Strike Zone', component: TheStrikeZonePage },
-      { title: 'Fair and Foul Balls', component: FairandFoulBallsPage },
-      { title: 'Runner Hit by Ball', component: RunnerHitbyBallPage },
-      { title: 'The Batter is Out', component: TheBatterisOutPage },
-      { title: 'The Batter-Runner is Out', component: TheBatterRunnerisOutPage },
-      { title: 'Force Plays', component: ForcePlaysPage },
-      { title: 'Batting Out Of Order', component: BattingOutOfOrderPage },
-      { title: 'Base Awards', component: BaseAwardsPage },
-      { title: 'Dead Ball', component: DeadBallPage },
-      { title: 'Part 3: The Runner', component: PartThreeTheRunnerPage },
-      { title: 'Obstruction', component: ObstructionPage },
-      { title: 'Base Awards', component: BaseAwardsThreePage },
-      { title: 'Runner is Out', component: RunnerisOutPage },
-      { title: 'Appeal Plays', component: AppealPlaysPage },
-      { title: 'Interference Plays', component: InterferencePlaysPage },
-      { title: 'Scoring Runs', component: ScoringRunsPage },
-      { title: 'Part 4: The Umpire', component: PartFourTheUmpirePage },
-      { title: 'Umpire Duties Prior to the Game', component: UmpireDutiesPage },
-      { title: 'Position of players', component: PositionofPlayersPage },
-      { title: 'A Team Training Session', component: TeamTrainingSessionPage },
-      { title: 'How to make a League Schedule', component: LeagueSchedulePage }
-    ];
-
-  }
+  constructor(private platform: Platform,
+				private statusBar: StatusBar,
+				private splashScreen: SplashScreen,
+				private alertCtrl: AlertController,
+				private menuCtrl: MenuController) {
+		this.initializeApp();
+	}
 
   initializeApp() {
     this.platform.ready().then(() => {
@@ -83,12 +76,172 @@ export class MyApp {
       // Here you can do any higher level native things you might need.
       this.statusBar.styleDefault();
       this.splashScreen.hide();
+
+      // Initialize some options
+			this.initializeOptions();
     });
   }
 
-  openPage(page) {
-    // Reset the content nav to have just this page
-    // we wouldn't want the back button to show in this scenario
-    this.nav.setRoot(page.component);
+  private initializeOptions(): void {
+		this.options = new Array<MenuOptionModel>();
+
+		// Load simple menu options
+		// ------------------------------------------
+		this.options.push({
+			displayName: 'Home',
+			component: HomePage,
+
+			// This option is already selected
+			selected: true
+		});
+
+    this.options.push({
+			displayName: 'Official Dimensions of a Softball Diamond',
+			component: OfficialDimensionsPage
+		});
+
+    this.options.push({
+			displayName: 'Pitching distances',
+			component: PitchingDistancesPage
+		});
+
+    this.options.push({
+			displayName: 'Batting Box and Base Dimensions',
+			component: BattingBoxandBaseDimensionsPage
+		});
+
+    this.options.push({
+			displayName: 'Part 1: The Pitcher',
+			component: PartOneThePitcherPage
+		});
+
+    this.options.push({
+			displayName: 'Part 2: The Batter',
+			subItems: [
+        {
+					displayName: 'The Batter',
+					component: PartTwoTheBatterPage
+				},
+        {
+					displayName: 'The Strike Zone',
+					component: TheStrikeZonePage
+				},
+				{
+					displayName: 'Fair and Foul Balls',
+					component: FairandFoulBallsPage
+				},
+				{
+					displayName: 'Runner Hit by Ball',
+					component: RunnerHitbyBallPage
+				},
+				{
+					displayName: 'The Batter is Out',
+					component: TheBatterisOutPage
+				},
+        {
+					displayName: 'The Batter-Runner is Out',
+					component: TheBatterRunnerisOutPage
+				},
+        {
+					displayName: 'Force Plays',
+					component: ForcePlaysPage
+				},
+        {
+					displayName: 'Batting Out Of Order',
+					component: BattingOutOfOrderPage
+				},
+        {
+					displayName: 'Base Awards',
+					component: BaseAwardsPage
+				},
+        {
+					displayName: 'Dead Ball',
+					component: DeadBallPage
+				}
+			]
+		});
+
+    this.options.push({
+			displayName: 'Part 3: The Runner',
+			subItems: [
+				{
+					displayName: 'The Runner',
+					component: PartThreeTheRunnerPage
+				},
+				{
+					displayName: 'Obstruction',
+					component: ObstructionPage
+				},
+				{
+					displayName: 'Base Awards',
+					component: BaseAwardsThreePage
+				},
+				{
+					displayName: 'Runner is Out',
+					component: RunnerisOutPage
+				},
+        {
+					displayName: 'Appeal Plays',
+					component: AppealPlaysPage
+				},
+        {
+					displayName: 'Interference Plays',
+					component: InterferencePlaysPage
+				},
+        {
+					displayName: 'Scoring Runs',
+					component: ScoringRunsPage
+				}
+			]
+		});
+
+    this.options.push({
+			displayName: 'Part 4: The Umpire',
+			subItems: [
+				{
+					displayName: 'The Umpire',
+					component: PartFourTheUmpirePage
+				},
+				{
+					displayName: 'Umpire Duties Prior to the Game',
+					component: UmpireDutiesPage
+				}
+			]
+		});
+
+    this.options.push({
+			displayName: 'Position of players',
+			component: PositionofPlayersPage
+		});
+
+    this.options.push({
+			displayName: 'A Team Training Session',
+			component: TeamTrainingSessionPage
+		});
+
+    this.options.push({
+			displayName: 'How to make a League Schedule',
+			component: LeagueSchedulePage
+		});
   }
+  public selectOption(option: MenuOptionModel): void {
+		this.menuCtrl.close().then(() => {
+			// Redirect to the selected page
+			this.nav.setRoot(option.component);
+		});
+	}
+
+	public collapseMenuOptions(): void {
+		this.sideMenu.collapseAllOptions();
+	}
+
+	public presentAlert(message: string): void {
+		let alert = this.alertCtrl.create({
+			title: 'Information',
+			message: message,
+			buttons: ['Ok']
+		});
+		alert.present();
+	}
+
 }

@@ -35,6 +35,9 @@ import { ImagePage } from '../pages/image/image';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+// Custom components
+import { SideMenuContentComponent } from '../shared/side-menu-content/side-menu-content.component';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -65,7 +68,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     PositionofPlayersPage,
     TeamTrainingSessionPage,
     LeagueSchedulePage,
-    ImagePage
+    ImagePage,
+
+    // Side menu custom component
+    SideMenuContentComponent
   ],
   imports: [
     BrowserModule,
